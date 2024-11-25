@@ -9,6 +9,8 @@ This Go program generates a population of random integers and floats, and calcul
 - [Installation](#installation)
 - [Usage](#usage)
 - [Code Explanation](#code-explanation)
+- [Comparison](#comparison)
+- [Summary](#summary)
 
 ## Introduction
 

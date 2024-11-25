@@ -11,6 +11,7 @@ import (
 	"github.com/hamodikk/trimmedmean"
 )
 
+// Helper function to generate a population of random integers and floats
 func generatePopulation(populationSize int) []interface{} {
 	// seed for random number generator
 	rand.Seed(int64(42))

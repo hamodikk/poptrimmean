@@ -31,14 +31,20 @@ func generatePopulation(populationSize int) []interface{} {
 
 func main() {
 	// accept the population size from the user
-	if len(os.Args) != 2 {
+	if len(os.Args) >= 3 {
 		log.Fatal("Usage: poptrimmean <population size>")
 	}
 
 	// convert the input to an integer
-	populationSize, err := strconv.Atoi(os.Args[1])
-	if err != nil {
-		log.Fatal(err)
+	var populationSize int
+	var err error
+	if len(os.Args) == 2 {
+		populationSize, err = strconv.Atoi(os.Args[1])
+		if err != nil {
+			log.Fatal(err)
+		}
+	} else {
+		populationSize = 200
 	}
 
 	// set up logging (mainly to recover the population for cross-checking)
